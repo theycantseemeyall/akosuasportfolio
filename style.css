@@ -40,60 +40,7 @@ body {
 }
 
 
-/* Bubble */
-.bubble {
-  position: absolute;
-  width: 140px;
-  height: 140px;
 
-  border-radius: 58% 42% 63% 37% / 48% 55% 45% 52%;
-
-  background:
-    radial-gradient(
-      circle at 30% 30%,
-      rgba(255,255,255,0.75),
-      rgba(255,255,255,0.25) 40%,
-      rgba(255,255,255,0.1) 65%,
-      rgba(255,255,255,0.03)
-    );
-
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
-
-  box-shadow:
-    inset -12px -12px 20px rgba(255,255,255,0.35),
-    inset 10px 10px 25px rgba(255,255,255,0.08),
-    0 30px 60px rgba(255,255,255,0.15);
-
-  pointer-events: none;
-
-  animation:
-    blobMorph 6s ease-in-out infinite,
-    floatIdle 5s ease-in-out infinite;
-
-  transition:
-    transform 0.25s ease-out,
-    left 0.2s ease-out,
-    top 0.2s ease-out;
-}
-@keyframes blobMorph {
-  0% {
-    border-radius: 58% 42% 63% 37% / 48% 55% 45% 52%;
-  }
-  50% {
-    border-radius: 42% 58% 37% 63% / 55% 45% 60% 40%;
-  }
-  100% {
-    border-radius: 58% 42% 63% 37% / 48% 55% 45% 52%;
-  }
-}
-@keyframes floatIdle {
-  0%   { transform: translate(0, 0) scale(1); }
-  25%  { transform: translate(20px, -30px) scale(1.03); }
-  50%  { transform: translate(-15px, -10px) scale(0.98); }
-  75%  { transform: translate(25px, 20px) scale(1.02); }
-  100% { transform: translate(0, 0) scale(1); }
-}
 /* FILES / PROJECTS SECTION */
 .scroll-section {
   position: relative;
