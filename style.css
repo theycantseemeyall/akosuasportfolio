@@ -45,7 +45,7 @@ body {
 .scroll-section {
   position: relative;
   height: 400vh; /* enough to scroll all cards */
-  background: #0b0b0b;
+  background: #000000;
 }
 
 .sticky-container {
@@ -93,10 +93,10 @@ body {
 }
 
 /* COLORS FOR PROJECTS */
-.stack .card:nth-child(1) { background: #111; }
-.stack .card:nth-child(2) { background: #1a1a1a; }
-.stack .card:nth-child(3) { background: #222; }
-.stack .card:nth-child(4) { background: #2a2a2a; }
+.stack .card:nth-child(1) { background: #c8c8c8; }
+.stack .card:nth-child(2) { background: #c8c8c8; }
+.stack .card:nth-child(3) { background: #c8c8c8; }
+.stack .card:nth-child(4) { background: #c8c8c8; }
 
 .card-img {
   width: 80%;
@@ -118,6 +118,36 @@ body {
   color: #333;
   text-align: center;
 }
+/* From Uiverse.io by barisdogansutcu */ 
+button {
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(0, 90%, 28%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(95, 4, 19) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(0, 90%, 28%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(95, 4, 19) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
 
 /* NEXT SECTION */
 .after-files {
