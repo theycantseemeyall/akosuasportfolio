@@ -18,7 +18,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   background: #000;
+  background: #000;
+  position: relative;   /* blobs are positioned relative to this */
+  overflow: hidden;     /* clips blobs to hero bounds */
+}
+
+/* Blobs host — lives inside .hero, covers it fully */
+#lava-host {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .label {
@@ -30,11 +40,15 @@ body {
 .name {
   font-size: 220px;
   font-weight: 900;
-  color: #6b1f32;
+  color: rgb(95, 4, 19);
   pointer-events: none;
+  user-select: none;          /* not selectable */
+  -webkit-user-select: none;
 }
+
 .name-wrapper {
-  position: relative;
+  position: relative;   /* sits above the blobs */
+  z-index: 1;
   display: inline-block;
   cursor: pointer;
 }
@@ -44,7 +58,7 @@ body {
 /* FILES / PROJECTS SECTION */
 .scroll-section {
   position: relative;
-  height: 400vh; /* enough to scroll all cards */
+  height: 400vh;
   background: #000000;
 }
 
@@ -55,7 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* center everything vertically */
+  justify-content: center;
 }
 
 .files-title {
@@ -75,8 +89,8 @@ body {
 
 .card {
   position: absolute;
-  top: 50%;  /* center vertically */
-  left: 50%; /* center horizontally */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   width: 420px;
   height: 560px;
@@ -92,7 +106,6 @@ body {
   z-index: 1;
 }
 
-/* COLORS FOR PROJECTS */
 .stack .card:nth-child(1) { background: #c8c8c8; }
 .stack .card:nth-child(2) { background: #c8c8c8; }
 .stack .card:nth-child(3) { background: #c8c8c8; }
@@ -118,7 +131,8 @@ body {
   color: #333;
   text-align: center;
 }
-/* From Uiverse.io by barisdogansutcu */ 
+
+/* From Uiverse.io by barisdogansutcu */
 button {
   padding: 10px 10px;
   border-radius: 10px;
