@@ -114,3 +114,30 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
 });
+
+// double click to kill//
+const container = document.querySelector(".character-container");
+
+container.addEventListener("dblclick", () => {
+  container.classList.add("dead");
+});
+
+// timeline part//
+const moments = document.querySelectorAll(".moment");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
+
+moments.forEach((moment) => {
+  observer.observe(moment);
+});
