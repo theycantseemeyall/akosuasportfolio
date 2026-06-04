@@ -6,8 +6,8 @@
 
 body {
   font-family: Inter, system-ui, sans-serif;
-  background: #000;
-  color: white;
+  background: #000000;
+  color: rgb(0, 0, 0);
   overflow-x: hidden;
 }
 
@@ -18,9 +18,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: #ffffff;
   position: relative;   /* blobs are positioned relative to this */
-  overflow: hidden;     /* clips blobs to hero bounds */
+  overflow: visible;     /* clips blobs to hero bounds */
 }
 
 /* Blobs host — lives inside .hero, covers it fully */
@@ -59,7 +59,7 @@ body {
 .scroll-section {
   position: relative;
   height: 400vh;
-  background: #000000;
+  background: #ffffff;
 }
 
 .sticky-container {
@@ -100,7 +100,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.35);
   opacity: 0.35;
   transition: all 0.4s ease;
   z-index: 1;
@@ -134,8 +134,9 @@ body {
 
 /* From Uiverse.io by barisdogansutcu */
 button {
+  margin: 10px;
   padding: 10px 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   border: 0;
   background-color: white;
@@ -161,14 +162,42 @@ button:active {
   transform: translateY(10px);
   transition: 100ms;
 }
-
+.button-row {
+  display: flex;
+  gap: 5px; /* space between buttons */
+  justify-content: center; /* centers the row */
+  align-items: center;
+}
 
 /* NEXT SECTION */
 .after-files {
   height: 100vh;
-  background: #111;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.portrait {
+  width: 500px;
+  height: 550px;
+  background: #000000;
+  border-radius: 30px;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero,
+.scroll-section,
+.after-files {
+  background: #ffffff;
+}
+
+.after-files,
+.scroll-section {
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
