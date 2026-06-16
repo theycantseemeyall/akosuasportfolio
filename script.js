@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   (function () {
     const CFG = {
-      color1: '#8b1a2e',   // deep burgundy
-      color2: '#c0392b',   // rich red
+      color1: '#7A1F2B',   // deep burgundy
+      color2: '#5D0413',   // rich red
       count:  6,
       speed:  1.1,
       size:   1.4,         // bigger blobs
