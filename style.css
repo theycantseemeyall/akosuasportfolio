@@ -8,7 +8,7 @@ body {
   font-family: Inter, system-ui, sans-serif;
   background: #000000;
   color: rgb(0, 0, 0);
-  overflow-x: hidden;
+ overflow-x: hidden;
 }
 
 /* HERO */
@@ -551,4 +551,25 @@ button:active {
 .sticker2 {
   bottom: 120px;
   left: 520px;
+}
+
+.phone-scroll-section {
+  height: 500vh;
+  position: relative;
+  ;
+}
+
+.phone-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+#retrophone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
